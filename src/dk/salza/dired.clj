@@ -1,4 +1,4 @@
-(ns dk.salza.apps.dired2app
+(ns dk.salza.dired
   (:require [dk.salza.liq.editor :as editor]
             [dk.salza.liq.slider :refer :all]
             [dk.salza.liq.extensions.linenavigator]
@@ -7,7 +7,7 @@
             [clojure.string :as str]))
 
 ;; Dired with java io
-;; -rw-rw-r--  1 mogens mogens  227 Oct 13 09:26 dired2app.clj
+;; -rw-rw-r--  1 mogens mogens  227 Oct 13 09:26 dired.clj
 ;; Rename file
 ;; Search below
 ;; Make dir
@@ -92,7 +92,7 @@
 (defn run
   [folder]
   (set-dir (io/file folder))
-  (editor/new-buffer "dired2app")
+  (editor/new-buffer "dired")
   (init-keymaps)
   (editor/set-keymap (@state :keymap-navigation))
   (update-display))
