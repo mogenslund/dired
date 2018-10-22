@@ -91,7 +91,7 @@
 
 (defn run
   [folder]
-  (set-dir (io/file folder))
+  (set-dir (io/file (or folder (.getAbsolutePath (io/file "")))))
   (editor/new-buffer "dired")
   (init-keymaps)
   (editor/set-keymap (@state :keymap-navigation))

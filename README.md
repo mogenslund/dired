@@ -8,9 +8,9 @@ The [liquid-starter-kit](https://github.com/mogenslund/liquid-starter-kit) can b
 In the deps.edn include this project in the deps section, like
 
     {:deps mogenslund/dired {:git/url "https://github.com/mogenslund/dired.git"
-                             :sha "3f7641e5a009c6b111242662a3275cdf0a1f1ef4"}}
+                             :tag "v0.1.0"}}
 
-(Maybe with an updated sha, to get the newest version)
+(Maybe with an updated tag, to get the newest version)
 
 In your project require `[dk.salza.dired :as dired]` and assign a keyboad shortcut like this:
 
