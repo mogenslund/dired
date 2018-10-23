@@ -1,4 +1,25 @@
 (ns dk.salza.dired
+  "Dired for navigating files.
+  Special keys:
+
+    C-j    Parent folder
+    Enter  Choose file or navigate to folder
+
+  # To enable
+  Add 
+
+    {:deps mogenslund/dired
+           {:git/url \"https://github.com/mogenslund/dired.git\"
+            :tag \"v0.1.0\"}}
+
+  to deps.edn
+
+  Require [dk.salza.dired :as dired]
+
+  Eval:
+
+    (editor/add-interactive \"dired\" #(dired/run (editor/get-folder)))"
+
   (:require [dk.salza.liq.editor :as editor]
             [dk.salza.liq.slider :refer :all]
             [dk.salza.liq.extensions.linenavigator]
