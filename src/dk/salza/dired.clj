@@ -19,7 +19,6 @@
   Eval:
 
     (editor/add-interactive \"dired\" #(dired/run (editor/get-folder)))"
-
   (:require [dk.salza.liq.editor :as editor]
             [dk.salza.liq.slider :refer :all]
             [dk.salza.liq.extensions.linenavigator]
