@@ -14,7 +14,7 @@ In the deps.edn include this project in the deps section, like
 
 In your project require `[dk.salza.dired :as dired]` and assign a keyboad shortcut like this:
 
-    (editor/set-global-key :f6 #(dired/run (editor/get-folder)))
+    (editor/set-global-key "f6" #(dired/run (editor/get-folder)))
 
 or add dired to `C-space` typeahead using this:
 
