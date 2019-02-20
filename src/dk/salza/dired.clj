@@ -99,12 +99,12 @@
   []
   (swap! state assoc
     :keymap-navigation
-    (assoc @textapp/keymap-navigation
+    (assoc dk.salza.liq.keymappings.navigation/keymapping
       "\t" #(editor/set-keymap (@state :keymap-insert))
       "C-j" parent
       "\n" choose)
     :keymap-insert
-    (assoc @textapp/keymap-insert
+    (assoc dk.salza.liq.keymappings.insert/keymapping
       "\t" #(editor/set-keymap (@state :keymap-navigation))
       "\n" identity)))
 
