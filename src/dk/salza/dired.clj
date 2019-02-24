@@ -99,13 +99,17 @@
   []
   (swap! state assoc
     :keymap-navigation
-    (assoc dk.salza.liq.keymappings.navigation/keymapping
+    (assoc dk.salza.liq.keymappings.normal/keymapping
       "\t" #(editor/set-keymap (@state :keymap-insert))
+      "i" #(editor/set-keymap (@state :keymap-insert))
       "C-j" parent
+      "C-h" parent
+      "backspace" parent
       "\n" choose)
     :keymap-insert
     (assoc dk.salza.liq.keymappings.insert/keymapping
       "\t" #(editor/set-keymap (@state :keymap-navigation))
+      "esc" #(editor/set-keymap (@state :keymap-navigation))
       "\n" identity)))
 
 
