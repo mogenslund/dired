@@ -102,6 +102,11 @@
     (assoc dk.salza.liq.keymappings.normal/keymapping
       "\t" #(editor/set-keymap (@state :keymap-insert))
       "i" #(editor/set-keymap (@state :keymap-insert))
+      "o" #(do (editor/insert-line) (editor/set-keymap (@state :keymap-insert)))
+      "a" #(do (editor/forward-char) (editor/set-keymap (@state :keymap-insert)))
+      "A" #(do (editor/end-of-line) (editor/set-keymap (@state :keymap-insert)))
+      "O" #(do (editor/insert-line-above) (editor/set-keymap (@state :keymap-insert)))
+      "I" #(do (editor/first-non-blank) (editor/set-keymap (@state :keymap-insert)))
       "C-j" parent
       "C-h" parent
       "backspace" parent
